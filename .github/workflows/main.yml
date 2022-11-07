@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Github Actions テストOK"
+        env:
+          GITHUB_TOKEN: ${{ secrets.TEST_SECRET }}
