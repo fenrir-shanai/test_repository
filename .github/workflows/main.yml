@@ -1,9 +1,10 @@
 name: learn-github-actions
-on: repository_dispatch
+on: repository_dispatch:
+  types: [on-demand-test]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Github Actions テストOK"
-        env:
-          GITHUB_TOKEN: ${{ secrets.TEST_SECRET }}
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.TEST_SECRET }}
