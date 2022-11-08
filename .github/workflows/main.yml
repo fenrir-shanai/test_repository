@@ -1,5 +1,7 @@
 name: learn-github-actions
-on: repository_dispatch
+on:
+  repository_dispatch:
+    types: [test-action]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
